@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to MelodyHub</title>
+    <link rel='stylesheet' href='login.css'/>
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="/map-login">Login</a></li>
+        <li><a href="/map-register">Register</a></li>
+    </ul>
+</nav>
+<form action="/login" method="post">
+    <h1>Login</h1>
+    <label>Email ID:</label>
+    <input type="email" name="email"/>
+    <br/><br/>
+    <label>Password:</label>
+    <input type="password" name="password"/>
+    <br/><br/>
+    <input type="submit" value="LOGIN"/>
+    <h5>Invalid Credentials, Please login again!!</h5>
+</form>
+
+</body>
+</html>

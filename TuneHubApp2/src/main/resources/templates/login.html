@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to MelodyHub</title>
+    <link rel='stylesheet' href='login.css'/>
+    
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="/map-login">Login</a></li>
+        <li><a href="/map-register">Register</a></li>
+    </ul>
+</nav>
+
+<form action="/login" method="post" onsubmit="return validateEmail()">
+    <h1>Login</h1>
+    <label>Email ID:</label>
+    <input type="email" id="email" name="email" required/>
+    <br/><br/>
+    <label>Password:</label>
+    <input type="password" name="password" required/>
+    <br/><br/>
+    <input type="submit" value="LOGIN"/>
+    <div class="resetpassword">
+        <a href="/resetpassword">Forgot Password?</a>
+    </div>
+</form>
+
+<script>
+    function validateEmail() {
+        var email = document.getElementById('email').value;
+        if (email.indexOf('.com') === -1) {
+            alert('Please enter a valid email address with .com domain');
+            return false;
+        }
+        return true;
+    }
+</script>
+    
+</body>
+</html>

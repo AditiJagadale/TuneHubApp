@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel='stylesheet' href='register.css'/>
+   
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="/map-login">Login</a></li>
+        <li><a href="/map-register">Register</a></li>
+    </ul>
+</nav>
+
+<form action="/register" method="post" onsubmit="return validateEmail()">
+    <h1>Register</h1>
+    <label>Username: </label>
+    <input type="text" name="username" required/>
+    <br/><br/>
+    <label>Email Id: </label>
+    <input type="email" name="email" id="email" required/>
+    <br/><br/>
+    <label>Password: </label>
+    <input type="password" name="password" required/>
+    <br/><br/>
+    <label>Gender: </label>
+    <label for="male">Male</label>
+    <input type="radio" name="gender" value="male" id="male">
+    <label for="female">Female</label>
+    <input type="radio" name="gender" value="female" id="female">
+    <label for="other">Other</label>
+    <input type="radio" name="gender" value="other" id="other">
+    <br/><br/>
+    <label>Role: </label>
+    <label for="admin">Admin</label>
+    <input type="radio" name="role" value="admin" id="admin">
+    <label for="user">Customer</label>
+    <input type="radio" name="role" value="user" id="user">
+    <br/><br/>
+    <label>Address: </label>
+    <textarea name="address"></textarea>
+    <br/><br/>
+    <input type="submit" value="REGISTER">
+</form>
+
+<script>
+    function validateEmail() {
+        var email = document.getElementById('email').value;
+        if (!email.includes('.com')) {
+            alert('Please enter a valid email address with .com domain');
+            return false;
+        }
+        return true;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel='stylesheet' href='createPlaylist.css'/>
+</head>
+<body>
+
+<nav>
+
+        <ul>
+            <li class="nav-left">
+                <a href="#" class="logo">
+                    <img src="https://r2.erweima.ai/chatgpt/file-Frl54B0nK36Ab7VZV86f5tyi.png" alt="logo" >
+                    <span class="nav-items" id="logo">MelodyHub</span>
+                </a>
+            </li>
+            
+            <li><a href="/map-songs" class="symbol">
+                
+                <img src="data:image/png;base64,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" alt="add music" >
+                <span class="nav-items" id="symbol">Add Songs</span>
+                </a>
+            </li>
+            <li><a href="/map-viewsongs" class="symbol">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLC9ySK-IiWOQIyJdZzYnsb5Bd7kvLXZjmNQ&usqp=CAU" alt="play music" >
+                <span class="nav-items" id="symbol">Play Songs</span>
+                </a>
+            </li>
+            <li><a href="createplaylist" class="symbol">
+                <img src="data:image/png;base64,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" alt="add playlist" >
+                <span class="nav-items" id="symbol">Create Playlist</span>
+                </a>
+            </li>
+            
+            <li><a href="/viewplaylist" class="symbol">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvpTSAy-dCp8W0KWHjUcH14trIW0J26azoSw&usqp=CAU" alt="play playlist" >
+                <span class="nav-items" id="symbol">View Playlist</span>
+                </a>
+            </li>
+            <li class="nav-right"><a href="/map-login" class="logout">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2Q1xPK1aezaBGXXAMEel7H5z0XBRCWWxBRg&usqp=CAU" alt="play playlist" >
+                <span class="nav-items" id="logout">Logout</span>
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+ <main class="table" id="customers_table">
+        <section class="table__header">
+            <h3>Create Playlist</h3>
+        </section>
+        <section class="table__body">
+        <form action="/addplaylist" method="post">
+            <table>
+                <thead>
+                    <tr>
+                        
+                            <th>
+                                <label id="name">Playlist Name: </label>
+                                
+                                 <input type="text" name="name" id="name"  placeholder="Enter playlist name" required>
+                                <br><br>
+                            </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div th:each="song:${songlist}">
+                                <input id="check" type="checkbox" th:name="songs" th:value="${song.id}" >
+                                <label th:text="${song.name}"></label>
+                                <br><br><br>
+                            </div>
+                        </td>
+                    </tr>  
+                </tbody>
+                <thead>
+                <tr>
+                    <th class="submit">
+                        <input type="submit" id="submit" value="ADD PLAYLIST"/>
+                        <br><br>
+                    </th>
+                </tr>
+            </thead>
+            
+            </table>
+            </form>
+        </section>
+    </main>
+    
+</body>
+</html>

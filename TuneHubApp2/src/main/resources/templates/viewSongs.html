@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Songs</title>
+    <link rel="stylesheet" href="displaySongs.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="nav-left" >
+                <a href="#" class="logo">
+                    <img src="https://r2.erweima.ai/chatgpt/file-Frl54B0nK36Ab7VZV86f5tyi.png" alt="logo" >
+                    <span class="nav-items" id="logo">MelodyHub</span>
+                </a>
+            </li>
+           
+            <li><a href="/exploresongs" class="symbol">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLC9ySK-IiWOQIyJdZzYnsb5Bd7kvLXZjmNQ&usqp=CAU">
+                <span class="nav-items" id="symbol">Play Songs</span>
+                </a>
+            </li>
+            
+            <li><a href="/displayPlaylist" class="symbol">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvpTSAy-dCp8W0KWHjUcH14trIW0J26azoSw&usqp=CAU" alt="play playlist" >
+                <span class="nav-items" id="symbol">View Playlist</span>
+                </a>
+            </li>
+            <li class="nav-right"><a href="/map-login" class="logout">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2Q1xPK1aezaBGXXAMEel7H5z0XBRCWWxBRg&usqp=CAU" alt="play playlist" >
+                <span class="nav-items" id="logout">Logout</span>
+                </a>
+            </li>
+            
+            
+        </ul>
+    </nav>
+    <div class="container">
+    <div class="cartoon"></div>
+    <main class="table">
+    	
+        <section class="table__header">
+            <h3>Explore Songs</h3>
+            <input type="text" id="searchInput" placeholder="Search Artist, Songs, Genre">
+        </section>
+        <section class="table__body">
+            <table id="songTable">
+                <thead>
+                <tr>
+                    <tr>
+                    	<th>ID</th>
+                        <th>Name</th>
+                        <th>Artist</th>
+                        <th>Genre</th>
+                        <th>Link</th>
+                    </tr>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr class="column" th:each="songlist:${songlist}">
+                    	<td th:text=${songlist.id}></td>
+                        <td th:text=${songlist.name}></td>
+                        <td th:text=${songlist.artist}></td>
+                        <td th:text=${songlist.genre}></td>
+                        <td><audio controls>
+                            <source th:src=${songlist.link} type="audio/mpeg"></audio>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</div>
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const table = document.getElementById('songTable');
+        const rows = table.getElementsByTagName('tr');
+
+        searchInput.addEventListener('keyup', function() {
+            const searchText = searchInput.value.toLowerCase();
+
+            for (let i = 0; i < rows.length; i++) {
+                const cells = rows[i].getElementsByTagName('td');
+                let found = false;
+
+                for (let j = 0; j < cells.length && !found; j++) {
+                    const cellText = cells[j].innerText.toLowerCase();
+                    if (cellText.indexOf(searchText) > -1) {
+                        found = true;
+                    }
+                }
+
+                if (found) {
+                    rows[i].style.display = '';
+                } else {
+                    rows[i].style.display = 'none';
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

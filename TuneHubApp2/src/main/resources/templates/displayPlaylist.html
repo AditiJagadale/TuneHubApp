@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Playlist</title>
+    <link rel="stylesheet" href="displayPlaylist.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="nav-left">
+                <a href="#" class="logo">
+                    <img src="https://r2.erweima.ai/chatgpt/file-Frl54B0nK36Ab7VZV86f5tyi.png" alt="logo" >
+                    <span class="nav-items" id="logo">MelodyHub</span>
+                </a>
+            </li>
+           
+            <li><a href="/exploresongs" class="symbol">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLC9ySK-IiWOQIyJdZzYnsb5Bd7kvLXZjmNQ&usqp=CAU">
+                <span class="nav-items" id="symbol">Play Songs</span>
+                </a>
+            </li>
+            
+            <li><a href="/displayPlaylist" class="symbol">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvpTSAy-dCp8W0KWHjUcH14trIW0J26azoSw&usqp=CAU" alt="play playlist" >
+                <span class="nav-items" id="symbol">View Playlist</span>
+                </a>
+            </li>
+            <li class="nav-right"><a href="/map-login" class="logout">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2Q1xPK1aezaBGXXAMEel7H5z0XBRCWWxBRg&usqp=CAU" alt="play playlist" >
+                <span class="nav-items" id="logout">Logout</span>
+                </a>
+            </li>
+            
+            
+        </ul>
+    </nav>
+
+   <main class="table">
+        <section class="table__header">
+            <h3>Explore Playlist</h3>
+        </section>
+        <section class="table__body">
+            <table>
+                <thead>
+                    
+                        <tr>
+							<th>Playlist ID</th>
+							<th>Playlist Name</th>
+							<th>Playlist Songs</th>
+						</tr>
+                    
+                </thead>
+                <tbody>
+                    <tr th:each="plist:${plist}">
+			<td th:text=${plist.id}></td>
+			<td th:text=${plist.name}>
+			<td>
+				<ul class="list">
+					<li th:each="s:${plist.songs}">
+					
+						<audio controls>
+							<source th:src=${s.link} type="audio/mpeg">
+						</audio>
+					</li>
+				</ul>
+			</td>
+		</tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>

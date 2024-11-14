@@ -1,0 +1,304 @@
+@charset "UTF-8";
+/* adminhome.css */
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.wel {
+    text-align: center;
+    color: #ffcc00;
+   	top: 30px;
+    font-size: 20px;
+    
+}
+
+/* Navigation Styles */
+nav {
+    background-color: whitesmoke;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    margin: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color:black;
+    display: flex;
+    align-items: center;
+}
+
+a:hover {
+    color: #ffcc00;
+}
+
+/* Logo */
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.nav-items {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Symbol Links */
+.symbol img {
+    height: 30px;
+    margin-right: 8px;
+}
+
+/* Logout */
+.logout img {
+    height: 30px;
+    margin-right: 8px;
+}
+
+.logout:hover {
+    color: #ff6666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    li {
+        margin: 10px 0;
+    }
+
+    .logo img {
+        height: 30px;
+    }
+
+    .nav-items {
+        font-size: 16px;
+    }
+
+    .symbol img, .logout img {
+        height: 25px;
+    }
+}
+
+/*@page {
+    size: landscape;
+    margin: 0; 
+}*/
+
+body {
+	/*background-image: url('https://file.aiquickdraw.com/chatgpt/file-GU0BVi1lBfYRbK68Fud7zcsA.png');*/
+	background: #363636;
+            background-repeat: no-repeat;
+  			background-size: cover;
+  			height: 100%;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full height of viewport */
+    min-height: 100vh;
+    
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start; /* Align items at the top */
+    gap: 20px; /* Space between the cartoon and table */
+    margin: 20px;
+}
+div.cartoon {
+    width: 100px; /* Set width of the cartoon div */
+    height: 100px; /* Set height of the cartoon div */
+    background-image: url("https://www.bing.com/images/search?view=detailV2&ccid=yyS6%2fXLp&id=7016EA9E99158B055A14C29FB1BB3BEFFC10F09B&thid=OIP.yyS6_XLpxb-Bv6pj_0jCnAHaHa&mediaurl=https%3a%2f%2fpics.craiyon.com%2f2023-10-27%2f63ff19feef504d6fb6c2ddc229ea5f1a.webp&exph=1024&expw=1024&q=give+me+image+of+cartoon+listening+to+the+music&FORM=IRPRST&ck=A0B401E26D42C1A3895C1BDA9DC8546C&selectedIndex=147&itb=0"); /* Set the background image URL */
+    background-size: cover;  /*Make the image cover the div */
+    background-position: left; /* Center the image */
+    /*background-repeat: no-repeat; /* Do not repeat the image */
+}
+main.table {
+    width: 70vw;
+    height: 90vh;
+    background-color: #fff5;
+
+    backdrop-filter: blur(7px);
+    box-shadow: 0 .4rem .8rem #0005;
+    border-radius: .8rem;
+	margin-left: 150px;
+	margin-top: 100px;
+    overflow: hidden;
+}
+
+.table__header {
+    width: 100%;
+    height: 10%;
+    background-color: black	;
+    padding: .8rem 1rem;
+	font-weight: normal;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.table__body {
+    width: 95%;
+    max-height: calc(89% - 1.6rem);
+    background-color: #2C3539;
+
+    margin: .8rem auto;
+    border-radius: .6rem;
+
+    overflow: auto;
+    overflow: overlay;
+}
+
+
+.table__body::-webkit-scrollbar{
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+.table__body::-webkit-scrollbar-thumb{
+    border-radius: .5rem;
+    background-color: #0004;
+    visibility: hidden;
+}
+
+.table__body:hover::-webkit-scrollbar-thumb{ 
+    visibility: visible;
+}
+
+
+table {
+    width: 100%;
+}
+
+
+
+table, th, td {
+    border-collapse: collapse;
+    padding: 1rem;
+    text-align: left;
+}
+
+thead th {
+    position: sticky;
+    top: 70;
+    left: 0;
+    background-color: #d5d1defe;
+    color: black;
+    text-transform: capitalize;
+    z-index: 1; /* Ensure the header is above other elements */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #0000000b;
+}
+
+
+tbody tr:hover {
+    background-color: #fff6 !important;
+}
+
+	
+@media (max-width: 1000px) {
+    td:not(:first-of-type) {
+        min-width: 12.1rem;
+    }
+}
+
+/* Set widths for individual table columns */
+td:nth-child(1), th:nth-child(1) { /* Target the first column */
+    width: 45%; /* Set the width of the first column */
+}
+
+td:nth-child(2), th:nth-child(2) { /* Target the second column */
+    width: 25%; /* Set the width of the second column */
+}
+
+td:nth-child(3), th:nth-child(3) { /* Target the third column */
+    width: 25%; /* Set the width of the third column */
+}
+
+td:nth-child(4), th:nth-child(4) { /* Target the fourth column */
+    width: 5%; /* Set the width of the fourth column */
+}
+
+/* Target specific columns and change their font */
+td:nth-child(1) { /* Target the first column */
+    
+    font-family: "Verdana", sans-serif;
+    font-weight: bold;
+}
+
+td:nth-child(2) { /* Target the second column */
+    font-family: "Times New Roman", serif; /* Change the font family for the second column */
+}
+
+td:nth-child(3) { /* Target the third column */
+    font-family: "Courier New", monospace; /* Change the font family for the fourth column */
+}
+
+td:nth-child(4) { /* Target the fourth column */
+    font-family: "Courier New", monospace; /* Change the font family for the fourth column */
+}
+
+#searchInput {
+  padding: 8px 15px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  font-size: 16px;
+  width: 350px;
+  transition: border-color 0.3s ease;
+  outline: none;
+  margin-right: 20px;
+ 
+}
+
+#searchInput:focus {
+  border-color: #ff3d00;
+}
+
+h2
+{
+	font-weight: normal;
+	margin-left: 20px;
+}
+
+#symbol
+{
+	font-weight: normal;
+}
+
+.nav-right {
+    margin-left: auto; 
+}
+
+.nav-left {
+    margin-right: auto; 
+}

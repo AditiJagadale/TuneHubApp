@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="customerHome.css"/>
+</head>
+<body>
+<h1>Hello <span th:text="${session.name}">User</span>, Welcome to Customer Home!</h1>
+    <nav>
+        <ul>
+            <li class="nav-left">
+                <a href="#" class="logo">
+                    <img src="https://r2.erweima.ai/chatgpt/file-Frl54B0nK36Ab7VZV86f5tyi.png" alt="logo" >
+                    <span class="nav-items" id="logo">MelodyHub</span>
+                </a>
+            </li>
+            
+            
+            <li><a href="/exploresongs" class="symbol">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLC9ySK-IiWOQIyJdZzYnsb5Bd7kvLXZjmNQ&usqp=CAU" alt="play music" >
+                <span class="nav-items" id="symbol">Explore Songs</span>
+                </a>
+            </li>
+            
+           <li class="nav-right"><a href="/map-login" class="logout">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2Q1xPK1aezaBGXXAMEel7H5z0XBRCWWxBRg&usqp=CAU" alt="play playlist" >
+                <span class="nav-items" id="logout">Logout</span>
+                </a>
+            </li>
+            
+
+        </ul>
+    </nav>
+    
+    
+    
+    
+</body>
+</html>

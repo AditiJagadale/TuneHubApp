@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; /* Modern font */
+}
+
+/* Body Styling */
+body {
+    background-color: #121212; /* Dark background for contrast */
+    color: #ffffff; /* White text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Hero Section */
+.hero {
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://via.placeholder.com/1920x1080'); /* Background image */
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Heading Styling */
+h1 {
+    font-size: 4em; /* Large font size for prominence */
+    color: #ffcc00; /* Soft gold color for text */
+    text-align: center;
+    text-transform: uppercase; /* Uppercase for emphasis */
+    font-weight: 700; /* Bold text */
+    letter-spacing: 5px; /* Increased letter spacing */
+    background: linear-gradient(45deg, #f3c94c, #f0a500); /* Gradient background */
+    -webkit-background-clip: text; /* Clips the background to the text */
+    -webkit-text-fill-color: transparent; /* Makes the text color transparent */
+    animation: textGlow 2s ease-in-out infinite; /* Animation for glowing effect */
+}
+
+/* Animation for Glowing Text */
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 8px rgba(227, 181, 115, 0.7);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(227, 181, 115, 1);
+    }
+    100% {
+        text-shadow: 0 0 8px rgba(227, 181, 115, 0.7);
+    }
+}

@@ -1,0 +1,72 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .popup {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+            width: 400px;
+            text-align: center;
+            height: 200px;
+        }
+
+        h1 {
+            margin-top: 50px;
+            color: #333;
+        }
+
+        .buy-button {
+            background-color:  #ff3d00;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .buy-button:hover {
+            background-color:  #d50000;
+        }
+        
+                nav {
+            background-color:  #888;
+            text-align: right;
+            padding: 10px;
+            width: 100%; /* Occupy the full width */
+            position: fixed; /* Fixed position */
+            top: 0; /* Stick to the top */
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+        
+    

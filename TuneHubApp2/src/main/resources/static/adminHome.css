@@ -1,0 +1,128 @@
+@charset "UTF-8";
+/* adminhome.css */
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    /*background-color: #000;*/
+    background-image: url('https://file.aiquickdraw.com/chatgpt/file-GU0BVi1lBfYRbK68Fud7zcsA.png');
+    background-repeat: no-repeat;
+  	background-size: cover;
+  	background-position: top;
+  	height: 100%;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: #ffcc00;
+    
+    font-size: 30px;
+    font-family:Oleo Script;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: whitesmoke;
+    padding: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    margin: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color:black;
+    display: flex;
+    align-items: center;
+}
+
+a:hover {
+    color: #ffcc00;
+}
+
+/* Logo */
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.nav-items {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Symbol Links */
+.symbol img {
+    height: 30px;
+    margin-right: 8px;
+}
+
+/* Logout */
+.logout img {
+    height: 30px;
+    margin-right: 8px;
+}
+
+.logout:hover {
+    color: #ff6666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    li {
+        margin: 10px 0;
+    }
+
+    .logo img {
+        height: 30px;
+    }
+
+    .nav-items {
+        font-size: 16px;
+    }
+
+    .symbol img, .logout img {
+        height: 25px;
+    }
+}
+
+#symbol
+{
+	font-weight: normal;
+}
+
+.nav-right {
+    margin-left: auto; /* Pushes this item to the far right */
+}
+
+.nav-left {
+    margin-right: auto; /* Pushes this item to the far right */
+}
+
+.header h1{
+	text-align: center;
+	margin-top: 90px;
+	
+}
+
+
